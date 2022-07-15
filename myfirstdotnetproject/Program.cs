@@ -1,14 +1,14 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace myfirstdotnetproject {
     class Program
     {
 
-        static  void myFun()
-        {
-            Console.WriteLine("=== my function is here =====");
-        }
+        //static  void myFun()
+        //{
+        //    Console.WriteLine("=== my function is here =====");
+        //}
         static void Main(String[] args)
         {
 
@@ -128,11 +128,11 @@ namespace myfirstdotnetproject {
             // static key word is for the same class functions that need to be triggered
             // inside the main method of the class
 
-             String func()
-            {
-                Console.WriteLine(" i am here ");
-                return "i am here ";
-            };
+            // String func()
+            //{
+            //    Console.WriteLine(" i am here ");
+            //    return "i am here ";
+            //};
 
             //myFun();
             //func();func
@@ -142,18 +142,18 @@ namespace myfirstdotnetproject {
             ///
 
 
-            double myTotal(params double[] prices )
-            {
-                double total = 0;
-                foreach(double price in prices)
-                {
+            //double myTotal(params double[] prices )
+            //{
+            //    double total = 0;
+            //    foreach(double price in prices)
+            //    {
 
-                    total += price;
-                }
+            //        total += price;
+            //    }
 
 
-                return total;
-            }
+            //    return total;
+            //}
 
             //Console.WriteLine("  total 0 ===> " + myTotal());
             //Console.WriteLine("  total 1 ===> " + myTotal(1));
@@ -245,18 +245,126 @@ namespace myfirstdotnetproject {
             ////////////////////////////////////////////////////////////////////
 
 
-            // abstract class can not be generating objects
-              AbstractClass.hello();
+            //// abstract class can not be generating objects
+            //  AbstractClass.hello();
 
-            // all abstact methods need to be impelemented in the childs 
-            AbstractClassChild abstractClassChild = new AbstractClassChild("hillal");
-            abstractClassChild.helloWord();
-            abstractClassChild.showChildName();
-          
+            //// all abstact methods need to be impelemented in the childs 
+            //AbstractClassChild abstractClassChild = new AbstractClassChild("hillal");
+            //abstractClassChild.helloWord();
+            //abstractClassChild.showChildName();
+
+            //////// method overriding /////////////////////////
+            ////////////////////////////////////////////////////
+            ///
+
+            //Dog dog = new Dog();
+            //Cat cat = new Cat();
+
+            //dog.speak();
+            //cat.speak();
+
+
+            ///////////////// ploymorphism /////////////////////////
+            ////////////////////////////////////////////////////////
+
+            // polymorphisim is the childern inhirirts the same properties
+            // form the parents and if we need to have an array of different
+            // children we simply assign the array to the parent
+
+            //Dog dog = new Dog();
+            //Cat cat = new Cat();
+
+            //Animal[] animals = { dog, cat };
+
+
+            ///////////////////////// interfaces //////////////////
+            ///////////////////////////////////////////////////////
+            ///
+
+            //Lion lion = new Lion();
+
+            //lion.eat();
+            //lion.hunt();
+            //lion.jump();
+            //lion.play();
+
+            //Cheata cheata = new Cheata();
+
+            //cheata.eat();
+            //cheata.hunt();
+            //cheata.jump();
+            //cheata.play();
+            //cheata.run();
+
+            ///////////////////////////////// list ////////////////
+            //////////////////////////////////////////////////////
+            //////////
+
+            //List<String> food = new List<String>();
+
+            //food.Add("pizza");
+            //food.Add("pie");
+            //food.Add("bread");
+            //food.Add("spagiti");
+            //food.Add("pasta");
+
+
+            //food.Remove("pasta");
+            //food.Insert(0, "soup");
+
+            //Console.WriteLine("count ===> " + food.Count());
+            //Console.WriteLine("soup index ===> " + food.IndexOf("soup"));
+
+            //foreach (String meal in food)
+            //{
+            //    Console.WriteLine(" ===> " + meal);
+            //}
+
+            //////////////// getters and setters ////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////
+            ////
+
+            //Car car = new Car(30);
+            //Console.WriteLine(" car speed1 ====> " + car.Speed);
+
+            //car.Speed = 90;
+            //Console.WriteLine(" car speed2 ====> " + car.Speed);
+
+
+
+            ///////////////////////// enums //////////////////////////
+            ////////////////////////////////////////////////////////
+
+
+            //Console.WriteLine($"the month {Enumerations.January}" +
+            //    $"is the {(int)Enumerations.January} "+
+            //    $"in the row");
+
+
+
+            ////////////////   generics ///////////////////////////
+            //////////////////////////////////////////////////////
+            ///
+
+
+            //String[] schools = { "NYU", "CUNY" };
+            //int[] numbers = { 1, 2};
+            //double[] doubles = { 2.4, 3.5};
+
+            //Gernerics.displayElements(schools);
+            //Gernerics.displayElements(numbers);
+            //Gernerics.displayElements(doubles);
+
+
+            //////////////// Threads /////////////////////////
+            //////////////////////////////////////////////////
+
+            Threads.showThreads();
+
+
         }
     }
 
 
 }
 
- 
