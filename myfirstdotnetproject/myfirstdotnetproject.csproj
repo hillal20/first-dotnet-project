@@ -11,4 +11,9 @@
     <Compile Remove="..\..\..\Desktop\myfirstdotnetproject\myClass.cs" />
     <Compile Remove="..\..\..\Desktop\InputOutputIO.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="EWSoftware.VSSpellChecker" />
+    <None Remove="NetSpell" />
+    <None Remove="Spell.Check" />
+  </ItemGroup>
 </Project>

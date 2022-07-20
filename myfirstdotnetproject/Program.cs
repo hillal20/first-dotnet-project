@@ -359,7 +359,15 @@ namespace myfirstdotnetproject {
             //////////////// Threads /////////////////////////
             //////////////////////////////////////////////////
 
-            Threads.showThreads();
+            //Threads.showThreads();
+
+
+            ///////////// hashtables and dicssionary /////////////////
+            //////////////////////////////////////////////////////////
+            ///
+
+            HashtableClass.showHashtabe();
+
 
 
         }
