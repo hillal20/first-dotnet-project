@@ -51,15 +51,15 @@ namespace myfirstdotnetproject {
             //Console.WriteLine("name ===> " + name);
 
 
-            //////////////////// math class //////////////////////////////
-            //////////////////////////////////////////////////////////////
+            //////////////////// math class ///////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////
             ///
 
             //double f = Math.Pow(2, 4);
             //Console.WriteLine(" f ====> " + f);
 
-            //////////// random /////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////
+            //////////// random /////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////
             ///
 
             //Random random = new Random();
@@ -69,8 +69,8 @@ namespace myfirstdotnetproject {
             //Console.WriteLine(" ran ====> " + ran);
 
 
-            //////// string methods ///////////////////////////////////
-            //////////////////////////////////////////////////////////
+            //////// string methods //////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////
             ///
 
             //String fullName = "HIlal Aissani";
@@ -89,8 +89,8 @@ namespace myfirstdotnetproject {
             //String lastName = name.Substring(6);
             //Console.WriteLine("last name ====> "+lastName);
 
-            ////////////////////// while loop //////////////////
-            ////////////////////////////////////////////////////
+            ////////////////////// while loop ////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////////////////
 
 
             //int num = 4;
@@ -105,8 +105,8 @@ namespace myfirstdotnetproject {
 
 
 
-            /////////// arrays //////////////////////////////////////
-            ////////////////////////////////////////////////////////
+            ///////  arrays ////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////
 
             //String[] cars = { "gold", "cc", "tigwan" };
             //Console.WriteLine(" cars ====> " + cars.Length);
@@ -115,14 +115,14 @@ namespace myfirstdotnetproject {
             // arrays have a fixed size
             // String[] array = new string[3]; this means the Length is 3
 
-            //foreach (String car in cars )
+            //foreach (String car in cars)
             //{
             //    Console.WriteLine(" c ====> " + car);
             //}
 
 
-            ////////////// fuctions ///////////////////////////////////
-            ///////////////////////////////////////////////////////////
+            ////////////// fuctions ////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////
             ///
 
             // static key word is for the same class functions that need to be triggered
@@ -137,8 +137,8 @@ namespace myfirstdotnetproject {
             //myFun();
             //func();func
 
-            /////////////// functions with params of a different lenght
-            ////////////////////////////////////
+            /////////////// functions with params of a different lenght ////////
+            //////////////////////////////////////////////////////////////////
             ///
 
 
@@ -162,8 +162,8 @@ namespace myfirstdotnetproject {
             //Console.WriteLine("  total 4 ===> " + myTotal(1,2,3,4));
 
 
-            ///////// string interpolation /////////////////////////
-            /////////////////////////////////
+            ///////// string interpolation ////////////////////////////////////
+            //////////////////////////////////////////////////////////////////
             ///
 
             //String str = $" Hilal Aissani is {37} years old";
@@ -173,8 +173,8 @@ namespace myfirstdotnetproject {
 
 
 
-            /////////////////// multidemential array /////////////////
-            //////////////////////////////
+            /////////////////// multidemential array //////////////////////////
+            //////////////////////////////////////////////////////////////////
             //////
 
 
@@ -277,8 +277,8 @@ namespace myfirstdotnetproject {
             //Animal[] animals = { dog, cat };
 
 
-            ///////////////////////// interfaces //////////////////
-            ///////////////////////////////////////////////////////
+            ///////////////////////// interfaces ////////////////////////////
+            //////////////////////////////////////////////////////////////////
             ///
 
             //Lion lion = new Lion();
@@ -366,10 +366,97 @@ namespace myfirstdotnetproject {
             //////////////////////////////////////////////////////////
             ///
 
-            HashtableClass.showHashtabe();
+            //HashtableClass.showHashtabe();
+
+            //////////////// IEnumerable / INumerator /////////////////////
+            /////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////
+
+
+            /*  !!!!!! important note 
+             foreach is irrirating over the enumerator defaulted in every
+               arrary,  this enumerator is there because the interface IEnumerable inforce it
+             IEnumerable has non implemented  function called GetEnumerator() which return IEnumerator 
+            */
+            //foreach (Hasky haskyDog in DogsShelter.dogslist)
+            //{
+            //    haskyDog.Bark(4);
+
+            //}
+
+            /*
+             the logic below is another implentation of the foreach loop using the enumeratror (in javascript is called generator )          
+             */
+
+            // let access the dogslist enumerator
+            //var dogsListEnumerator = DogsShelter.dogslist.GetEnumerator();
+            //while (dogsListEnumerator.MoveNext())
+            //{
+            //    Console.WriteLine("next ==> "+ dogsListEnumerator.Current.Name);
+            //}
+
+
+            ///////////////////// making classes enumaratable ///////////////////////////
+            ////////////////////////////////////////////////////////////////////////////
+
+            //PlayWithNames playWithNames = new PlayWithNames();
+            //playWithNames.showNames();
+
+            //List<String> lastNames = playWithNames.showNames();
+
+
+            //// 1 - getting the enumerator of a list 
+            //var lastNamesEnumerator = lastNames.GetEnumerator();
+
+            //// iterating over the enurmerator step one 
+            //var step1 = lastNamesEnumerator.MoveNext(); // yes or no 
+            //var step1Content = lastNamesEnumerator.Current;
+            //Console.WriteLine(" step one ====> " + step1);
+            //Console.WriteLine("step one content ===> " + step1Content);
+
+            //// iterating over the enurmerator step two
+            //var step2 = lastNamesEnumerator.MoveNext(); // yes or no 
+            //var step2Content = lastNamesEnumerator.Current;
+            //Console.WriteLine(" step one ====> " + step2);
+            //Console.WriteLine("step one content ===> " + step2Content);
+
+            //// iterating over the enurmerator step three
+            //var step3 = lastNamesEnumerator.MoveNext(); // yes or no 
+            //var step3Content = lastNamesEnumerator.Current;
+            //Console.WriteLine(" step one ====> " + step3);
+            //Console.WriteLine("step one content ===> " + step3Content);
+
+
+            /// let have a list an object of the student
+            //ClassRoom classRoom = new ClassRoom();
+            //Console.WriteLine(" studentList ====>" + classRoom.studentsList);
+
+            // but i need to loop inside the parent class(calssRoom) and not the studentsList 
+
+            //foreach(Student student in classRoom)
+            //{
+            //    Console.WriteLine(" student ====> " + student.Name);
+            //}
+
+
+            ////// dictionary //////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////
+            ///
+
+            //MyDictionary myDictionary = new MyDictionary();
+            //myDictionary.showMyDictionary();
 
 
 
+            ////////////// dictionanry with custom key and not primitve ////////
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            CustomKeyDictionary customKeyDictionary = new CustomKeyDictionary();
+            customKeyDictionary.showDictionary();
+
+
+            ////  close the run  //////////////////////////////////////////////////
+            Console.ReadLine();
         }
     }
 
